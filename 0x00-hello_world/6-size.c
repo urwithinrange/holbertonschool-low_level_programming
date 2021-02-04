@@ -12,7 +12,7 @@ int main(void)
 	printf("Size of an int: %d byte(s)\n", n = (sizeof(int)));
 	printf("Size of a long int: %d byte(s)\n", n = (sizeof(long)));
 	printf("size of a long long int: %d byte(s)\n", n = (sizeof(long long)));
-	printf("size of a long long int: %d byte(s)\n", n = (sizeof(float)));
+	printf("size of a float: %d byte(s)\n", n = (sizeof(float)));
 	return (0);
 }
 
