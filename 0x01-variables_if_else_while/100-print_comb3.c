@@ -20,7 +20,7 @@ int main(void)
 				putchar(n + 48);
 				putchar(t + 48);
 
-				if (n <= 8 && t <= 9)
+				if (n < 8 && t <= 9)
 				{
 					putchar(',');
 					putchar(' ');
