@@ -6,7 +6,7 @@
   */
 void times_table(void)
 {
-	int r, c, n;
+	int r, c, n, next;
 
 	for (c = 0; c <= 9; c++)
 	{
@@ -14,14 +14,16 @@ void times_table(void)
 		for (r = 0; r <= 9; r++)
 		{
 			n = r * c;
-			if (n < 10)
+			next = ((r + 1) * c);
+			if (n <= 9)
 			{
-				_putchar(' ');
 				_putchar('0' + n);
 				if (r < 9)
 				{
 					_putchar(',');
 					_putchar(' ');
+						if (next <= 9)
+							_putchar(' ');
 				}
 			}
 			else
@@ -32,6 +34,7 @@ void times_table(void)
 				{
 					_putchar(',');
 					_putchar(' ');
+
 				}
 			}
 		}
