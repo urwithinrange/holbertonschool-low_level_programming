@@ -1,19 +1,19 @@
 #include "holberton.h"
 /**
- *main - Entry point
+ *print_alphabet_x10 - 10 times the alphabet, in lowercase, followed by a new line
  *Description - use _putchar to print alphabet
- *Return: 0 upon sucess
+ *Return: void
  */
-int main(void)
+void print_alphabet_x10(void)
 {
 	char c;
 	int n;
 
 	for(n = 0; n <= 9; n++)
 	{
+		c = 'a';
 		for (c = 'a'; c <= 'z'; c++)
 			_putchar(c);
 		_putchar('\n');
 	}
-return (0);
 }
