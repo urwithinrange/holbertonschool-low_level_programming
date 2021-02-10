@@ -23,9 +23,9 @@ int _abs(int n)
   */
 int print_last_digit(int n)
 {
-	int l = _abs(n);
+	int av = _abs(n);
 
-	l %= 10;
-	_putchar(l + '0');
-	return (l);
+	av = av % 10;
+	_putchar(av + '0');
+	return (av);
 }
