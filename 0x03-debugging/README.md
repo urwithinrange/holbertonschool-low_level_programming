@@ -1,1 +1,1 @@
-ZZis directory contains the work for the C debugging project
+This directory contains the work for the C debugging project
