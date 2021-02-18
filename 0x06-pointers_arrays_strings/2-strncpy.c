@@ -1,20 +1,5 @@
 #include "holberton.h"
 /**
- *_strlen - function that returns the length of a string
- *@s: the string passed
- *Return: 0 on sucess
- */
-int _strlen(char *s)
-{
-	int n;
-
-	if (s == NULL)
-		return (0);
-	for (n = 0; s[n] != '\0'; n++)
-		continue;
-	return (n);
-}
-/**
   * _strncpy - cpoies a string of n char
   * @dest: the final string
   * @src: the string to copy from
@@ -23,17 +8,11 @@ int _strlen(char *s)
   */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int slen, i;
+	int i;
 
-	slen = _strlen(src);
-	if (slen > n)
-		for (i = 0; i < n; i++)
-			dest[i] = src[i];
-	else
-	{
-		for (i = 0; src[i] != '\0'; i++)
-			dest[i] = src[i];
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	if (i < n)
 		dest[i] = '\0';
-	}
 	return (dest);
 }
