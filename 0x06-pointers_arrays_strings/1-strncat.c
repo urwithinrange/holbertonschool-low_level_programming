@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
-  *_strncat -  concatenates two strings
+  **_strncat -  concatenates two strings
   *@dest: the original string for base
   *@src: the string to be added
   *@n: bytes used from src
-  *
+  *Return: the cat string
   */
 char *_strncat(char *dest, char *src, int n)
 {
