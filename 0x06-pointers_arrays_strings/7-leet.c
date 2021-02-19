@@ -13,7 +13,7 @@ char *leet(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		for (j = 0; j <= 5; j++)
-			if (str[i] == uc[j] || str[i] == UC[j])
+			if (str[i] == lc[j] || str[i] == UC[j])
 				str[i] = elite[j];
 	return (str);
 }
