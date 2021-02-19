@@ -13,9 +13,8 @@ char *rot13(char *str)
 		for (; (str[i] >= 97 && str[i] <= 122) ||
 				(str[i] >= 65 && str[i] <= 90); i++)
 		{
-			if (str[i] >= 78 && str[i] <= 90)
-				str[i] -= 13;
-			else if (str[i] >= 110 && str[i] <= 122)
+			if ((str[i] >= 78 && str[i] <= 90) ||
+			    (str[i] >= 110 && str[i] <= 122))
 				str[i] -= 13;
 			else
 				str[i] += 13;
