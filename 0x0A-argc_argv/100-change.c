@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	for (; t != 0; c++)
-		{	
+		{
 			if (t >= 25)
 				t -= 25;
 			else if (t >= 10)
