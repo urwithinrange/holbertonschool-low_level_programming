@@ -12,7 +12,7 @@ char *create_array(unsigned int size, char c)
 
 	p = malloc((size + 1) * sizeof(char));
 
-	if (p == NULL)
+	if (p == NULL || size <= 0)
 		return (NULL);
 	for (n = 0; n < size; n++)
 		p[n] = c;
