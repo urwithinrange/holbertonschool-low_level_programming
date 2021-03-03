@@ -22,18 +22,22 @@ int _strlen(char *s)
   */
 char *str_concat(char *s1, char *s2)
 {
-	int len_s1, len_s2, len, i, n;
+	int len1, len2, len, i, n;
 	char *cat;
 
-	len_s1 = _strlen(s1);
-	len_s2 = _strlen(s2);
-	len = len_s1 + len_s2;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len = len1 + len2;
 	cat = malloc(sizeof(char) * (len + 1));
 	if (cat == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != 00; i++)
 		cat[i] = s1[i];
 	for (n = 0; s2[n] != 00; n++)
-		cat[n + len_s1] = s2[n];
+		cat[n + len1] = s2[n];
 	return (cat);
 }
