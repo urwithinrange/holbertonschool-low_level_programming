@@ -41,7 +41,7 @@ char *argstostr(int ac, char **av)
 	int i, len = 0;
 	char *cat;
 
-	if (ac == 0 || av == NULL)
+	if (ac == 0)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		len += _strlen(av[i]) + 1;
@@ -50,10 +50,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
+		if (av[i] == NULL)
+			return (NULL);
 		_strcat(cat, av[i]);
 		_strcat(cat, "\n");
 	}
-	if (!cat)
-		return (NULL);
 	return (cat);
 }
