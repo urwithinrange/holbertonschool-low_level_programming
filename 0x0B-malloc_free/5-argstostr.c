@@ -38,7 +38,7 @@ char *_strcat(char *dest, char *src)
   */
 char *argstostr(int ac, char **av)
 {
-	int i, len = 0;
+	int i, len = 1;
 	char *cat;
 
 	if (ac == 0)
