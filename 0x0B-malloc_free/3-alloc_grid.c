@@ -11,15 +11,15 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	size = (sizeof(int*) * height) + (sizeof(int) * height * width);
+	size = (sizeof(int *) * height) + (sizeof(int) * height * width);
 	buffer = (int **)malloc(size);
 	if (buffer == NULL)
 		return (NULL);
 	/* points to the first element of a 2D array*/
 	ptr = (int *)(buffer + height);
 	/*loop to point height pointer to appropriate location in 2D array*/
-	for(i = 0; i < height; i++)
-		buffer[i] = (ptr + width * i); 
+	for (i = 0; i < height; i++)
+		buffer[i] = (ptr + width * i);
 	/*loop sets buffer to 0*/
 	for (i = 0; i < height; i++)
 		for (j = 0; j < width; j++)
