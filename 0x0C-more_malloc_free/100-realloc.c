@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
-  *
-  *
-  *
-  *
+  *_realloc - setting more memory for ptr
+  *@ptr: the original pointer
+  *@old_size: original size of ptr
+  *@new_size: the size ptr needs to be increased to.
+  *Return: newstr with newly set amount of memory.
   */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -14,8 +15,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		newstr = malloc(new_size);
 		if (newstr == NULL)
 			return (NULL);
+		free(ptr);
+		return (newstr);
 	}
-	
+
 	if (new_size == old_size)
 		return (ptr);
 
@@ -24,7 +27,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	
+
 	else
 	{
 		newstr = malloc(new_size);
