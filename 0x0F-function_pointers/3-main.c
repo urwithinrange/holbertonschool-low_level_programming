@@ -31,4 +31,3 @@ int main(int ac, char **av)
 	printf("%d\n", s(num1,num2));
 	return (0);
 }
-
