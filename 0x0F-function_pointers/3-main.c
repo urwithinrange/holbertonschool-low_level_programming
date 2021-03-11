@@ -28,6 +28,6 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", s(num1,num2));
+	printf("%d\n", s(num1, num2));
 	return (0);
 }
