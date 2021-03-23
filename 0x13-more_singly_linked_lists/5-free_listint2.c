@@ -8,7 +8,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *next = NULL, *ptr;
 
-	if (*head == NULL)
+	if (*head == NULL || head == NULL)
 		return;
 	ptr = *head;
 	while (ptr != NULL)
@@ -17,7 +17,5 @@ void free_listint2(listint_t **head)
 		free(ptr);
 		ptr = next;
 	}
-	free(ptr);
-	free(next);
 	*head = NULL;
 }
