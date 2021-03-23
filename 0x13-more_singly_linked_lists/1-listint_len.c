@@ -6,12 +6,10 @@
   */
 size_t listint_len(const listint_t *h)
 {
-	size_t num = 0;
+	size_t num;
 	const listint_t = *ptr = h;
 
-	while (ptr != NULL)
-	{	num++;
+	for(num = 0; h != NULL; num++)
 		ptr = ptr->next;
-	}
 	return (num);
 }
