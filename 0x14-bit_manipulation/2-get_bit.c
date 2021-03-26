@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i = 0;
 
-	if (index > n)
+	if (index > 63)
 		return (-1);
 	/*convert n to binary*/
 	i = (n >> index) & 1;
