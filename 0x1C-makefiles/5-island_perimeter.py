@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def island_perimeter(grid):
     d = 0
     perimeter = 0
