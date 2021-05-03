@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""5-island_perimeter
+
+This script taakes the contents of a matrix (grid)
+and determines how many 0's are touching 1's returning
+perimeter with the total 0s that touch 1's
+"""
+
+
 def island_perimeter(grid):
+    """Returns perimeter total"""
     d = 0
     perimeter = 0
     height = len(grid) - 1
@@ -16,7 +25,7 @@ def island_perimeter(grid):
                 if c != 0:  # not he first elem of grid row
                     if grid[d][c - 1] == 1:  # chk for first element == 1
                         sides -= 1  # land touching land
-                if d != height:  # d is not last row in order to check next row
+                if d != height:  # d is not last row in order to chk next row
                     if grid[d + 1][c] == 1:  # comp d == c in next row
                         sides -= 1  # land touching land
                 if d != 0:  # chk prev row and if last row chk prev row
